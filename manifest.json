@@ -1,0 +1,1642 @@
+{
+  "source": {
+    "repo": "opendatalab/OHR-Bench",
+    "repo_type": "dataset"
+  },
+  "license_note": "OHR-Bench is released for research purposes only, not for commercial use. Confirm internal legal sign-off before use.",
+  "selection": {
+    "algorithm": "budgeted-max-coverage greedy over evidence_source, deterministic tie-break by doc_name",
+    "page_budget": 250,
+    "max_doc_pages": 15,
+    "note": "Selection unit is a contiguous PAGE WINDOW, not a whole document. Submit only page_start..page_end to the OCR engine; the gt shipped here is trimmed to match.",
+    "finance_share": 0.4,
+    "source_weight": {
+      "table": 3.0,
+      "chart": 3.0,
+      "multi": 2.5,
+      "formula": 2.0,
+      "reading_order": 2.0,
+      "text": 1.0
+    },
+    "per_domain_page_budget": {
+      "academic": 18,
+      "administration": 18,
+      "finance": 106,
+      "law": 18,
+      "manual": 18,
+      "news": 18,
+      "notes": 18,
+      "paper": 18,
+      "textbook": 18
+    }
+  },
+  "totals": {
+    "windows": 90,
+    "pages": 214,
+    "qas": 713,
+    "evidence_mix": {
+      "formula": 132,
+      "table": 210,
+      "text": 117,
+      "chart": 163,
+      "reading_order": 86,
+      "multi": 5
+    },
+    "numeric_answers": 342
+  },
+  "documents": [
+    {
+      "doc_name": "academic/DUDE_157911e3080d18f4d799a122aaeb33fb",
+      "domain": "academic",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 7,
+      "evidence_sources": {
+        "formula": 6,
+        "table": 1
+      },
+      "pdf": {
+        "bytes": 1129395,
+        "sha256": "ce26e4e511e9bc1d48aca495cea09c595deb535d78a04aad3b63b743c53cea25"
+      }
+    },
+    {
+      "doc_name": "academic/DUDE_4765549e3002b59377acc1905d969e0e",
+      "domain": "academic",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 1,
+      "evidence_sources": {
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 65496,
+        "sha256": "cbebec6213acd573da11e92d830ae049e9f4082900dcdbfd0030118aa55e4a8d"
+      }
+    },
+    {
+      "doc_name": "academic/DUDE_65b9e17aa028acda5ec3d594f2327ad0",
+      "domain": "academic",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 9,
+      "evidence_sources": {
+        "text": 1,
+        "chart": 8
+      },
+      "pdf": {
+        "bytes": 1073408,
+        "sha256": "6672d9096a1c2693db0728357fcba914c9e3bde14ee4fc5f181d7202edcadb86"
+      }
+    },
+    {
+      "doc_name": "academic/DUDE_6ab24c91bbad30a7c45e14a8965fa322",
+      "domain": "academic",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "table": 2
+      },
+      "pdf": {
+        "bytes": 49685,
+        "sha256": "925eb88730ce6e4111bd108aa2393d9432c6fb0fb9d4adacbaa412bace562e90"
+      }
+    },
+    {
+      "doc_name": "academic/DUDE_9cabb2bbb2fa4a1aa35867d26645f2ca",
+      "domain": "academic",
+      "doc_total_pages": 5,
+      "page_start": 0,
+      "page_end": 4,
+      "pages": 5,
+      "is_window": false,
+      "qa_count": 14,
+      "evidence_sources": {
+        "formula": 8,
+        "table": 6
+      },
+      "pdf": {
+        "bytes": 364103,
+        "sha256": "e5c103ac4520317b4eea7ec27d825625899ba6c508c2238e4372f618b2d877db"
+      }
+    },
+    {
+      "doc_name": "academic/DUDE_a605e8c7fccd9716338a3fde2f0e1284",
+      "domain": "academic",
+      "doc_total_pages": 4,
+      "page_start": 0,
+      "page_end": 3,
+      "pages": 4,
+      "is_window": false,
+      "qa_count": 8,
+      "evidence_sources": {
+        "table": 3,
+        "formula": 3,
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 6016260,
+        "sha256": "42ecc694ec304d9ef9da8beeb0b2b6b3a4680463742f518b0d58e54477178814"
+      }
+    },
+    {
+      "doc_name": "academic/DUDE_e6f3855472231a7ca6aada2f8e85fe5a",
+      "domain": "academic",
+      "doc_total_pages": 4,
+      "page_start": 0,
+      "page_end": 3,
+      "pages": 4,
+      "is_window": false,
+      "qa_count": 29,
+      "evidence_sources": {
+        "table": 1,
+        "chart": 26,
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 155395,
+        "sha256": "657299f6e1822a3e4489fb0dd6aaebd7d4d60cafba4f33fc70c55d3f60472b7c"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_0497cde0f19618c0b101223fcea613ba",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 1,
+      "evidence_sources": {
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 212905,
+        "sha256": "5fe3d463d8d9d6b4048fe34c558ce23f7f62fd5c4d1669414e3883c1aecb150a"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_0972a4be11bc507228a3bc4a9f5665c9",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 2,
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 176821,
+        "sha256": "ff70442c216764fb929455407e8e018207fcf29fea30d68c1dcf70a40b0c2af3"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_10530f771a11f007ebd341f75215db61",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 1047112,
+        "sha256": "eeea128433f350805e3815d60323a44e6a1e76c1882997e24dfa558520a1d6ad"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_1bba72124aa766ae2a052ef7e3f33997",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 289620,
+        "sha256": "b427f13980fea6e436e4690becd55d9929bd1640dba416c37642cb49d0c1d036"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_243f0d5e964c73fbbc0ecf7e6d4fdb13",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 3
+      },
+      "pdf": {
+        "bytes": 46859,
+        "sha256": "beb84262e6e9c09f4f904501d33f965c4e2bd26e5320744c99e203865eb188cb"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_37fd0af9b97f831e0ce46ba26d8e7404",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 3
+      },
+      "pdf": {
+        "bytes": 75773,
+        "sha256": "c363076011f9cd8e812ed2daff22b0ffa84c1ac96ddc2f3da681c1e8faf564fa"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_4530b7915538163469088b4df4044d7d",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 5,
+      "evidence_sources": {
+        "table": 2,
+        "text": 1,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 15967,
+        "sha256": "83ee4346330a4a0ddc66b3fc279daf35a2b4fb08cc7187dd4be56eb4ec47848f"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_4b6c4462ca8652c7d758eb906fe5b1f6",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 1,
+      "evidence_sources": {
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 78415,
+        "sha256": "4f222ae2271f3fb29b7e66f2772f7d8e56806c42b890bcf69d2c096494d30dfe"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_6a24b833b42049cd217aac01c37dd643",
+      "domain": "administration",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "text": 4
+      },
+      "pdf": {
+        "bytes": 480833,
+        "sha256": "dda60e697ac2ec68c0dff677b2c0906bb2cf5fc28b0a9f15e0ed430ac1fa1edc"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_93fc82a8092c55a4e1ca5dac63e1966a",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 6,
+      "evidence_sources": {
+        "table": 4,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 28595,
+        "sha256": "7c608dd042d5cc5b361d9b4f56bf0de8063c91b35b6ad75f40742c89c5ac5ced"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_9b4c030cdb0b1495ad88275bb936a5dc",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 1335818,
+        "sha256": "b4f87fdd09ef5b9f0ac437574b1230a4e87af7dc5bc071e18060b7714794a32e"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_ab20a33bc0bb38bd10a5fd09d4c84de0",
+      "domain": "administration",
+      "doc_total_pages": 5,
+      "page_start": 0,
+      "page_end": 4,
+      "pages": 5,
+      "is_window": false,
+      "qa_count": 17,
+      "evidence_sources": {
+        "chart": 14,
+        "table": 2,
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 163288,
+        "sha256": "4bec36fdb854be2a9693fcec621277bbf24cc393d4e41c7819922448e6cbc728"
+      }
+    },
+    {
+      "doc_name": "administration/DUDE_f1dd5a4e91eb347fe625c1bac723cae5",
+      "domain": "administration",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 3
+      },
+      "pdf": {
+        "bytes": 838951,
+        "sha256": "e046390a9c3badcd9f881369e52ce9d786c98d00646557a28396fef9fd03951b"
+      }
+    },
+    {
+      "doc_name": "finance/AES_2022_10K",
+      "domain": "finance",
+      "doc_total_pages": 257,
+      "page_start": 83,
+      "page_end": 97,
+      "pages": 15,
+      "is_window": true,
+      "qa_count": 57,
+      "evidence_sources": {
+        "chart": 50,
+        "table": 3,
+        "formula": 4
+      },
+      "pdf": {
+        "bytes": 4479324,
+        "sha256": "9c5de2227534c4d6bf3d805f635bad5d82eddf8e4183a85a3d1311b48b50291d"
+      }
+    },
+    {
+      "doc_name": "finance/AMAZON_2017_10K",
+      "domain": "finance",
+      "doc_total_pages": 85,
+      "page_start": 50,
+      "page_end": 64,
+      "pages": 15,
+      "is_window": true,
+      "qa_count": 24,
+      "evidence_sources": {
+        "table": 21,
+        "formula": 3
+      },
+      "pdf": {
+        "bytes": 627047,
+        "sha256": "f8af08ff6c4147351ec3a6e5e2c74e104678ce68fb0d6d476b1e43f685c09a3f"
+      }
+    },
+    {
+      "doc_name": "finance/AMAZON_2019_10K",
+      "domain": "finance",
+      "doc_total_pages": 83,
+      "page_start": 50,
+      "page_end": 64,
+      "pages": 15,
+      "is_window": true,
+      "qa_count": 27,
+      "evidence_sources": {
+        "table": 24,
+        "text": 1,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 619184,
+        "sha256": "d7df8c6cf3e351a8d68c7473be4159723d545260a32dbc82a8dd11c254c5584a"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_030cc994e11c5f60ebbd21e43e72afb9",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 3
+      },
+      "pdf": {
+        "bytes": 76446,
+        "sha256": "ebe01a46fc9de34a71852907bd48a709d8e8c961ee2b58229d9e94591147576c"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_08b17e0576793471a84ef486e420e1bc",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "text": 1,
+        "table": 1,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 157193,
+        "sha256": "65978b75b27ca42c4fbc04ec48766656770dc31b8024d0177675ba9705ccdf1f"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_14e2b38682e240a0271398353da073bf",
+      "domain": "finance",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 9,
+      "evidence_sources": {
+        "table": 4,
+        "formula": 5
+      },
+      "pdf": {
+        "bytes": 184803,
+        "sha256": "6462d975b49d351a037f214bc14ffd05c69b3904fe07414c8e999401e41a76c0"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_162c5b46a6e16c572afc89bdd9ff92df",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 5,
+      "evidence_sources": {
+        "table": 2,
+        "formula": 3
+      },
+      "pdf": {
+        "bytes": 76301,
+        "sha256": "5842a579e398994b86da31c4e57574c0a8977691e6db306100e230788d710bac"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_2879a049d77aae9eccbedf4e9af7ac70",
+      "domain": "finance",
+      "doc_total_pages": 6,
+      "page_start": 0,
+      "page_end": 5,
+      "pages": 6,
+      "is_window": false,
+      "qa_count": 15,
+      "evidence_sources": {
+        "table": 5,
+        "formula": 2,
+        "chart": 8
+      },
+      "pdf": {
+        "bytes": 173992,
+        "sha256": "d6aaf5331db77610f2c5b9acb1833fbc1453c8d328699a99ff132e35b67af1ef"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_2a7ac7aa2b93a0e448f2e316a3e0269a",
+      "domain": "finance",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 3
+      },
+      "pdf": {
+        "bytes": 192606,
+        "sha256": "7bfab2ece632d55a7c73ab25a8b3c75369f7b08021535329db4ad6c6c895b861"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_2bff30e93cd3f2a7a81adca007edd1d3",
+      "domain": "finance",
+      "doc_total_pages": 3,
+      "page_start": 0,
+      "page_end": 2,
+      "pages": 3,
+      "is_window": false,
+      "qa_count": 5,
+      "evidence_sources": {
+        "table": 5
+      },
+      "pdf": {
+        "bytes": 26038,
+        "sha256": "d84299c44dfb3dbc00206405cd8c50ae71b0515fba7cf96d659d50d24aeb3fa9"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_3972c68b7740ec65759bedda4aecc8f8",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "table": 2,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 31957,
+        "sha256": "3c9f3f05f0785626f91eace2ab4ebbcb43f00706d0c03676ffc54cc8b6635466"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_39b236c1bc41a9cfb7a8077ab3fd2853",
+      "domain": "finance",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 7,
+      "evidence_sources": {
+        "table": 5,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 22193,
+        "sha256": "f1b14024ed23d4f8586cd1a217a8a6fadac9dda757041c796419666f6b5b42a2"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_4ead21606785b8a12a5382c99c98e38c",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 5,
+      "evidence_sources": {
+        "table": 3,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 16371,
+        "sha256": "b36413960ff43c854cdd8022721f27678de9733e2ac679eabd0ca1cb1813009a"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_5dacfc7a1f4ba3b3dafc9e491fc06cb1",
+      "domain": "finance",
+      "doc_total_pages": 8,
+      "page_start": 0,
+      "page_end": 7,
+      "pages": 8,
+      "is_window": false,
+      "qa_count": 16,
+      "evidence_sources": {
+        "table": 12,
+        "formula": 4
+      },
+      "pdf": {
+        "bytes": 98099,
+        "sha256": "a082edc9492db249c00795d821c7d9c72172e3af0c28759a63c91c448d6617eb"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_5f3506b889bbba8cddc2d8b83b21a9cf",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 1,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 88931,
+        "sha256": "faa69832008ccdd9e4a5a0a98c9a627377c543d8478ea0b8104dfdf0f3d47ec7"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_6ce088baadf80dedef254f3a10fd1ae1",
+      "domain": "finance",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 11,
+      "evidence_sources": {
+        "text": 1,
+        "chart": 10
+      },
+      "pdf": {
+        "bytes": 53852,
+        "sha256": "6e5185ff6b6459872ffc2b8eddf394b1d517c5641fb3695f21e9cb510deca4bc"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_9f5e2ca5587c15514608ee169ece3d77",
+      "domain": "finance",
+      "doc_total_pages": 12,
+      "page_start": 0,
+      "page_end": 11,
+      "pages": 12,
+      "is_window": false,
+      "qa_count": 35,
+      "evidence_sources": {
+        "table": 16,
+        "formula": 19
+      },
+      "pdf": {
+        "bytes": 131266,
+        "sha256": "84332bcf558b263c1b6b6511882e9a13bfda0db4597f77877a891cd750370b56"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_cddce3de2047a025ebc37bdb7c741e77",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 2,
+        "formula": 1
+      },
+      "pdf": {
+        "bytes": 81836,
+        "sha256": "bafcf309a5797b7a1273d3bdc8864ebd278f9df0138b65c72f9359b64b5193e6"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_df61a1b371ad6e80a76b6b3c06dd57cd",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 2,
+        "formula": 1
+      },
+      "pdf": {
+        "bytes": 254232,
+        "sha256": "b32c9c3ed294b6fdd300a079749f98e40acd2efed7c3da66bd1f4bd1655402d5"
+      }
+    },
+    {
+      "doc_name": "finance/DUDE_fa2140aa1b11784d7c27314fccab5743",
+      "domain": "finance",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 3
+      },
+      "pdf": {
+        "bytes": 211042,
+        "sha256": "db5d2d0568c82ada47808f30ff51760be2557fd8d01e8e0650e962b671cae4a9"
+      }
+    },
+    {
+      "doc_name": "finance/VERIZON_2021_10K",
+      "domain": "finance",
+      "doc_total_pages": 120,
+      "page_start": 15,
+      "page_end": 29,
+      "pages": 15,
+      "is_window": true,
+      "qa_count": 46,
+      "evidence_sources": {
+        "formula": 4,
+        "chart": 33,
+        "table": 9
+      },
+      "pdf": {
+        "bytes": 2098068,
+        "sha256": "f7fcb508f920e3df9a07bc858a6d9f0d3cd1e976a46efe72375c9ffb983822ac"
+      }
+    },
+    {
+      "doc_name": "law/DUDE_1b0b3fb5ec538aa8ca1da27c3b500f36",
+      "domain": "law",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 103894,
+        "sha256": "e54928bfc8eda25ea360efffd866b23b39c52b42e0e191d21340915420664e72"
+      }
+    },
+    {
+      "doc_name": "law/DUDE_5338a15055d43ed03d2bf41dfe0e4da0",
+      "domain": "law",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "text": 4
+      },
+      "pdf": {
+        "bytes": 136375,
+        "sha256": "c8796dd57373abd4e77dad4fec419bfd4def8e885634fe511ab181fec14414e0"
+      }
+    },
+    {
+      "doc_name": "law/DUDE_6cd4b999973e3787ac703d4417881ad2",
+      "domain": "law",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 2,
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 8466,
+        "sha256": "34635f298801f37546174143e8c9940d1e2e8d0c21942cc232237db54fdf63bd"
+      }
+    },
+    {
+      "doc_name": "law/DUDE_7d5f6660f892400387fb8d91cfad4592",
+      "domain": "law",
+      "doc_total_pages": 3,
+      "page_start": 0,
+      "page_end": 2,
+      "pages": 3,
+      "is_window": false,
+      "qa_count": 6,
+      "evidence_sources": {
+        "text": 6
+      },
+      "pdf": {
+        "bytes": 198174,
+        "sha256": "2974d0c1ff46996d5ffd5dd3a7fa3411a4f2572015016c6e50afe4b6b7e3624d"
+      }
+    },
+    {
+      "doc_name": "law/DUDE_9bd004110e42eab4c5dfbef2a93b9f2a",
+      "domain": "law",
+      "doc_total_pages": 5,
+      "page_start": 0,
+      "page_end": 4,
+      "pages": 5,
+      "is_window": false,
+      "qa_count": 12,
+      "evidence_sources": {
+        "formula": 2,
+        "text": 7,
+        "table": 3
+      },
+      "pdf": {
+        "bytes": 92378,
+        "sha256": "f455085c2e5b9fcffc045bd8aa94342b24e7bf2d12d439e15b101c2aa14857f9"
+      }
+    },
+    {
+      "doc_name": "law/OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR AGREEMENT",
+      "domain": "law",
+      "doc_total_pages": 3,
+      "page_start": 0,
+      "page_end": 2,
+      "pages": 3,
+      "is_window": false,
+      "qa_count": 8,
+      "evidence_sources": {
+        "text": 7,
+        "table": 1
+      },
+      "pdf": {
+        "bytes": 48040,
+        "sha256": "559f7dd07b6203fad3e4b7802bf0354a8f0bbb203c6451aa0ae703dc49e40b69"
+      }
+    },
+    {
+      "doc_name": "law/ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor Agreement2",
+      "domain": "law",
+      "doc_total_pages": 3,
+      "page_start": 0,
+      "page_end": 2,
+      "pages": 3,
+      "is_window": false,
+      "qa_count": 7,
+      "evidence_sources": {
+        "text": 7
+      },
+      "pdf": {
+        "bytes": 186046,
+        "sha256": "b040c847f6342154672db563f190702f7675ae6be552b9263f1bef332f9261a4"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_0302d10b91a0ad03522b5889d1c453c7",
+      "domain": "manual",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 5,
+      "evidence_sources": {
+        "table": 4,
+        "formula": 1
+      },
+      "pdf": {
+        "bytes": 2752196,
+        "sha256": "c7038ca9cb03008cf2976f1482624f73ee104f50d1a6014d36d301d23871f797"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_0aced2d63aeebd7af916b8b6fe2a7ca5",
+      "domain": "manual",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 5,
+      "evidence_sources": {
+        "table": 2,
+        "formula": 3
+      },
+      "pdf": {
+        "bytes": 21613,
+        "sha256": "59822c7564d2202c680ebabc626408e2858a44fb94920176583a718d1fe3e33d"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_0b53f868b09478e8f81218d1042a4ffd",
+      "domain": "manual",
+      "doc_total_pages": 3,
+      "page_start": 0,
+      "page_end": 2,
+      "pages": 3,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "table": 3,
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 150642,
+        "sha256": "08b682479624d5c9469a9c076af5bea3602f69a85cbdb462369ec1e8b3accea2"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_133fb9865f98936c08cbb26719894c44",
+      "domain": "manual",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "table": 4
+      },
+      "pdf": {
+        "bytes": 62029,
+        "sha256": "aa0a52473e81b8013ffd2f2d905670e6f2f8cccf2f0c7439d892c52204fe3fff"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_134d6a060dc222ea2c8e3942d070c87f",
+      "domain": "manual",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "table": 1,
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 797972,
+        "sha256": "81f6f0bcf1e4bb59bf1d72ce5d1a76395ee731e366addca38485fa55f7bf4312"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_190275684ba8b70e559983757bad6e4c",
+      "domain": "manual",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 8,
+      "evidence_sources": {
+        "text": 8
+      },
+      "pdf": {
+        "bytes": 808034,
+        "sha256": "1ed2b020b2876ff4f1dc754a16bfe8c6eca574858b4b9ff3c8d3587026eda043"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_304e4e26a7ec123ff5f7932aa271a75a",
+      "domain": "manual",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 1,
+      "evidence_sources": {
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 387861,
+        "sha256": "770f2a21825c5200454aaf3b4a413a33a103ab4e1409299fff86351a9a430b58"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_5754d4f11716e47039161eadb51b70e2",
+      "domain": "manual",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 948623,
+        "sha256": "0f39d537a94c2ac39e70c5ca23f0c0cc8d5c2f600eeb10ab0f87024681107a43"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_6eab458673d9bf01f264326a76b2c115",
+      "domain": "manual",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "table": 1,
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 669200,
+        "sha256": "e499627acb685e5fa14e19c49566cd346bcc1d6830b655f548acf5bcf9acb4a7"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_7a0762c63314c1755fa6f02a19da5587",
+      "domain": "manual",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 240054,
+        "sha256": "2a2d67b085ba624d0005d4ab4571f3bf931f61b8711716a9cbc159e4dbdb46b1"
+      }
+    },
+    {
+      "doc_name": "manual/DUDE_7c2936796f14c3681324745ace7ba756",
+      "domain": "manual",
+      "doc_total_pages": 2,
+      "page_start": 0,
+      "page_end": 1,
+      "pages": 2,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 1,
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 292122,
+        "sha256": "0eea7da46a7a3d90b7fc5ba9b169693d8b9755df7ecb0f4defbb370321e1bf97"
+      }
+    },
+    {
+      "doc_name": "news/05_02",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 2027288,
+        "sha256": "ffdf3de08911e72ded034b21ed8da990b25fc1d4ad345f50ed39f8ed6d6163bd"
+      }
+    },
+    {
+      "doc_name": "news/05_03",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 2979107,
+        "sha256": "94857bcee481d271c802ebd4fafec38d184a40d8514660270c28183b367c1cdb"
+      }
+    },
+    {
+      "doc_name": "news/05_05",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 3283207,
+        "sha256": "4cbb6527604771e051e8a366f0d82a0436378f895a69885cebfccf346f9b44ad"
+      }
+    },
+    {
+      "doc_name": "news/05_06",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 3241146,
+        "sha256": "dc01d9a6ae32929e251092a89255ca0c3c7118fff418ccf7b195e96e44c7ae5b"
+      }
+    },
+    {
+      "doc_name": "news/05_08",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 2448769,
+        "sha256": "57354ca50c1b26f597e164d08a005f7846f4bbf29857b37035f96f640986fad6"
+      }
+    },
+    {
+      "doc_name": "news/05_09",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 2112965,
+        "sha256": "41ee754869f105de9434041c16f5e304bafdab0f2151e3c419fff8334c99e59b"
+      }
+    },
+    {
+      "doc_name": "news/05_11",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 2956568,
+        "sha256": "18b2174a9ab364013da0151084ac36ce73e70e923e89a0e903516692390c90cf"
+      }
+    },
+    {
+      "doc_name": "news/05_12",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 1740995,
+        "sha256": "7ccf49b7904d1f2bbad361e44d19a7424d034cc77d270a9f351277ba4e03d7a6"
+      }
+    },
+    {
+      "doc_name": "news/05_13",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "text": 3
+      },
+      "pdf": {
+        "bytes": 2890645,
+        "sha256": "16b207a79cfe8484d9ac61e29ad9758e6bbc9a622c64dd2df4d895d234a22e9b"
+      }
+    },
+    {
+      "doc_name": "news/DUDE_e3de17e096a22529da1572168737fbec",
+      "domain": "news",
+      "doc_total_pages": 3,
+      "page_start": 0,
+      "page_end": 2,
+      "pages": 3,
+      "is_window": false,
+      "qa_count": 16,
+      "evidence_sources": {
+        "text": 2,
+        "chart": 14
+      },
+      "pdf": {
+        "bytes": 538244,
+        "sha256": "392f3240691527deea18c07460f64cdb2739b3aec6f35052a3d96ccdc4519751"
+      }
+    },
+    {
+      "doc_name": "news/omnidocbench_newspaper_01f020903d7bc4b3fc69f500f41eb77e_1",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 11,
+      "evidence_sources": {
+        "table": 4,
+        "reading_order": 7
+      },
+      "pdf": {
+        "bytes": 662663,
+        "sha256": "b7bac49ff48f67118bc447a55d2bea1f759cb327f6bd7764e6092ced64b7074e"
+      }
+    },
+    {
+      "doc_name": "news/omnidocbench_newspaper_028a1dd5500fbd774e4d85df3c460c4d_1",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 20,
+      "evidence_sources": {
+        "reading_order": 20
+      },
+      "pdf": {
+        "bytes": 1197529,
+        "sha256": "d1c1354f0027111bfd67678b8eab5c6f26ca0c74196fa6979355be17a6173a10"
+      }
+    },
+    {
+      "doc_name": "news/omnidocbench_newspaper_a105e3b0ddb10be6a596f76407c79180_1",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 45,
+      "evidence_sources": {
+        "reading_order": 43,
+        "table": 2
+      },
+      "pdf": {
+        "bytes": 2007830,
+        "sha256": "8f88a83e0ef3834966ee88713c9e5658d657cca4769d831dab328fa7b397f75d"
+      }
+    },
+    {
+      "doc_name": "news/omnidocbench_newspaper_bd75af5f4791aa56ef05ce2443e8a7e0_1",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 11,
+      "evidence_sources": {
+        "multi": 2,
+        "reading_order": 9
+      },
+      "pdf": {
+        "bytes": 966369,
+        "sha256": "6f04351f3fc8fdf7b7779df3eafe47bddf2a665e30d862cb8273a9ee6c5c9f82"
+      }
+    },
+    {
+      "doc_name": "news/omnidocbench_newspaper_fe5ed29024932fad071afc53807b16ba_2",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "text": 1,
+        "formula": 2,
+        "reading_order": 1
+      },
+      "pdf": {
+        "bytes": 28741,
+        "sha256": "87cf26189a02b186dcc243f31353e1f27512f48d60aa9678bcb96cbc29949f6a"
+      }
+    },
+    {
+      "doc_name": "news/omnidocbench_newspaper_fe5ed29024932fad071afc53807b16ba_4",
+      "domain": "news",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 8,
+      "evidence_sources": {
+        "table": 2,
+        "formula": 3,
+        "reading_order": 3
+      },
+      "pdf": {
+        "bytes": 30305,
+        "sha256": "b6afa25a02c6e5fe274b9fcb106343b7f683aab84f20314d8fa066a4b95d3dd2"
+      }
+    },
+    {
+      "doc_name": "textbook/(Graduate_Studies_in_Mathematics,034)_Sigurdur_Helgason_-_Differential_Geometry,_Lie_Groups,_and_Symmetric_Spaces_(2001,_American_Mathematical_Society).pdf_143",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 6,
+      "evidence_sources": {
+        "formula": 6
+      },
+      "pdf": {
+        "bytes": 182539,
+        "sha256": "6f7887944ff9a56acc7d50553845799d146ebb25ad217ef0838cf41873da8942"
+      }
+    },
+    {
+      "doc_name": "textbook/(Graduate_Studies_in_Mathematics,070)_Sean_Dineen_-_Probability_Theory_in_Finance-American_Mathematical_Society_(2013).pdf_186",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 5,
+      "evidence_sources": {
+        "formula": 4,
+        "text": 1
+      },
+      "pdf": {
+        "bytes": 269293,
+        "sha256": "f84bd7ccab479a3c07c9737c423d24a43c3d20e821f9e08004e9f6126c5f8527"
+      }
+    },
+    {
+      "doc_name": "textbook/(Graduate_Studies_in_Mathematics,114)_Rotman,_Joseph_Jonah_-_Advanced_Modern_Algebra_(2010,_American_Mathematical_Society).pdf_314",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 6,
+      "evidence_sources": {
+        "formula": 6
+      },
+      "pdf": {
+        "bytes": 255084,
+        "sha256": "b0343fe07ea016b675cd2dd560cf640b76b4ac47ed129b0f8b59a3cacfcb2220"
+      }
+    },
+    {
+      "doc_name": "textbook/DUDE_2902d4ed88edf8dfc765f57adb5b6207",
+      "domain": "textbook",
+      "doc_total_pages": 4,
+      "page_start": 0,
+      "page_end": 3,
+      "pages": 4,
+      "is_window": false,
+      "qa_count": 6,
+      "evidence_sources": {
+        "text": 3,
+        "table": 2,
+        "multi": 1
+      },
+      "pdf": {
+        "bytes": 518049,
+        "sha256": "f77c4f1b829d40a752f0d2358bd644d150fbb0629e27ab2439e524f2a4455569"
+      }
+    },
+    {
+      "doc_name": "textbook/DUDE_8149dd3df914efe0c23823acad64299a",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 5,
+      "evidence_sources": {
+        "table": 2,
+        "multi": 1,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 310534,
+        "sha256": "a006e408aff0a56cdeb0fd5b126a7e6ba80796bfae3a0918454e1d72eb644381"
+      }
+    },
+    {
+      "doc_name": "textbook/Essential_Statistical_Inference_Theory_and_Methods.pdf_163",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 6,
+      "evidence_sources": {
+        "formula": 6
+      },
+      "pdf": {
+        "bytes": 291332,
+        "sha256": "169d326ff32ccbaeda2b3d2ac7861695d0fb6f8e8550335944fc6911d6728a75"
+      }
+    },
+    {
+      "doc_name": "textbook/GTM076.Algebraic.Geometry.An.Introduction.to.Birational.Geometry.of.Algebraic.Varieties.pdf_167",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 6,
+      "evidence_sources": {
+        "formula": 5,
+        "table": 1
+      },
+      "pdf": {
+        "bytes": 6972547,
+        "sha256": "dbeb7a46597d99c46577f76f64b70d284ebbfad79c80d48cc2b79feaa524f42d"
+      }
+    },
+    {
+      "doc_name": "textbook/GTM170-Sheaf_Theory1997.pdf_296",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 6,
+      "evidence_sources": {
+        "formula": 6
+      },
+      "pdf": {
+        "bytes": 219945,
+        "sha256": "01a46dc71059bae3713603d04010fdc17282d91530ed054ee2bae3ead35f1295"
+      }
+    },
+    {
+      "doc_name": "textbook/omnidocbench_docstructbench_dianzishu_zhongwenzaixian-o.O-60403612.pdf_179",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 9,
+      "evidence_sources": {
+        "formula": 5,
+        "table": 4
+      },
+      "pdf": {
+        "bytes": 389104,
+        "sha256": "1c9a784d0b4ba7496f6068f0ad56885bab0c6cc206fd7ff0b26cae7cc4a9ef1e"
+      }
+    },
+    {
+      "doc_name": "textbook/omnidocbench_docstructbench_dianzishu_zhongwenzaixian-o.O-60599898.pdf_30",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "reading_order": 2
+      },
+      "pdf": {
+        "bytes": 874183,
+        "sha256": "3fd8d5e071283d0a2249c8b0ba1f6a0ca0a44d206c149e8b64fa9e36d2e8fb4b"
+      }
+    },
+    {
+      "doc_name": "textbook/omnidocbench_docstructbench_dianzishu_zhongwenzaixian-o.O-61518266.pdf_149",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 2,
+      "evidence_sources": {
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 744854,
+        "sha256": "0c1391c5240f66b688842546502b08f7b80c3e606ed7db4f46fc9dcd4e04164f"
+      }
+    },
+    {
+      "doc_name": "textbook/omnidocbench_docstructbench_dianzishu_zhongwenzaixian-o.O-63674848.pdf_101",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 12,
+      "evidence_sources": {
+        "table": 12
+      },
+      "pdf": {
+        "bytes": 1079162,
+        "sha256": "f5df3f98eb609d9289afc102870be0804f5a7e6867e3d0abef0c1fa0fed89302"
+      }
+    },
+    {
+      "doc_name": "textbook/omnidocbench_docstructbench_dianzishu_zhongwenzaixian-o.O-63678132.pdf_161",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 1,
+      "evidence_sources": {
+        "reading_order": 1
+      },
+      "pdf": {
+        "bytes": 687425,
+        "sha256": "ddf9961d141bd4de44405a171f967b1fa4fcde258720a081298694478b862fa6"
+      }
+    },
+    {
+      "doc_name": "textbook/omnidocbench_jiaocaineedrop_chem-203343.pdf_121",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 4,
+      "evidence_sources": {
+        "text": 1,
+        "multi": 1,
+        "formula": 2
+      },
+      "pdf": {
+        "bytes": 141625,
+        "sha256": "fc47ec8884d84e3f9bfa3dffb87f99e1a4a36bb159966a3d76bf5e7e385d08e6"
+      }
+    },
+    {
+      "doc_name": "textbook/omnidocbench_jiaocaineedrop_socialsci-74973.pdf_31",
+      "domain": "textbook",
+      "doc_total_pages": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "pages": 1,
+      "is_window": false,
+      "qa_count": 3,
+      "evidence_sources": {
+        "table": 1,
+        "text": 2
+      },
+      "pdf": {
+        "bytes": 104235,
+        "sha256": "b02fff424c80ff89b8a96bc755df1441fab58320ba31ee1fe0c11f4fa830858f"
+      }
+    }
+  ]
+}

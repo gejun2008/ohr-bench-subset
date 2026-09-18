@@ -1,0 +1,5 @@
+pdfs/
+hf_cache/
+*.zip
+__pycache__/
+out/
