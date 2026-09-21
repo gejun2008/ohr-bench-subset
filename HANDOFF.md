@@ -14,33 +14,28 @@
 
 ## 1. 怎么拿到文件
 
-**交付方式：U 盘 / 内网共享盘等公司批准的传输渠道，不走 GitHub 下载。**
+**浏览器下载一个文件即可，不需要登录，不需要命令行。**
 
-原因：备份仓库是 private（数据集 research-only，不能公开），private 仓库的浏览器下载
-同样需要在公司机上登录 GitHub 账号。这一条不做假设，所以走物理/内网传输。
+仓库是 public（见 `NOTICE.md` 的出处与授权说明），匿名可下载。
 
-需要搬的就**一个文件**：
+下载地址（两个都指向同一个文件，任选其一）：
 
-| 文件 | 字节数 | SHA-256 |
-|---|---|---|
-| `ohr-handoff-v1.zip` | `67128516` (64.0 MiB) | `fbb790dcc770f6dec3660a510681b9d8e944019c5567262b674a30f7a725ef01` |
+- 页面上点 Download：https://github.com/gejun2008/ohr-bench-subset/blob/main/ohr-handoff-v1.zip
+- 直链：https://raw.githubusercontent.com/gejun2008/ohr-bench-subset/main/ohr-handoff-v1.zip
 
-个人机上的位置：`ohr-bench-subset/out/ohr-handoff-v1.zip`
+**字节数和 SHA-256 见仓库根目录的 [`SHA256SUMS.txt`](SHA256SUMS.txt)。**
+（校验值不写在本文件里：本文件有一份副本打包在 zip 内部，写进去就会自相矛盾。）
 
 这个 zip 是自包含的，解压即得下面第 2 节的完整目录，公司机不需要再从任何地方下载东西。
 里面含 302 个条目：90 个 PDF、90 个 gt、90 个 MinerU 基线、QA、manifest、两个脚本、操作指南。
 
-### 备份（仅在公司机浏览器能登录 GitHub 时可用）
+**如果公司代理只放行 github.com、拦掉 raw.githubusercontent.com**，用第一个页面链接点
+Download 按钮；仍然不通的话改用 U 盘 / 内网共享盘从个人机拷贝，文件在
+`ohr-bench-subset/out/ohr-handoff-v1.zip`。
 
-private 仓库：https://github.com/gejun2008/ohr-bench-subset
-
-仓库 zip（只有文本，**不含 PDF**）：
-`https://github.com/gejun2008/ohr-bench-subset/archive/refs/heads/main.zip`
-
-- 未登录访问返回 404，这是正常的
-- **没有创建 Release**，PDF 不在 GitHub 上，只在上面那个交付 zip 里
-- GitHub 动态生成的 archive zip **每次字节数和 sha256 都可能变**，不要拿它做完整性校验，
-  以 `ohr-handoff-v1.zip` 的 sha256 为准
+**没有创建 Release**，PDF 不在 Release 里，就在上面这个 zip 中。
+仓库 archive zip（`archive/refs/heads/main.zip`）也能下，但它由 GitHub 动态生成，
+每次字节数和 sha256 都可能变，不要拿它做完整性校验，一律以 SHA256SUMS.txt 为准。
 
 ---
 
@@ -55,7 +50,9 @@ ohr/
 ├── pdfs/<domain>/*.pdf
 ├── run_azure_di.py
 ├── score_ocr.py
-└── EVAL_GUIDE.md
+├── EVAL_GUIDE.md
+├── HANDOFF.md
+└── NOTICE.md
 ```
 
 `<domain>` 实际有 7 个：`academic` `administration` `finance` `law` `manual` `news` `textbook`。
@@ -94,7 +91,7 @@ pdf files: 90
 传输前后各算一次校验和：
 
 ```bash
-shasum -a 256 ohr-handoff-v1.zip      # macOS / Linux
+shasum -a 256 ohr-handoff-v1.zip      # macOS / Linux，比对仓库里的 SHA256SUMS.txt
 certutil -hashfile ohr-handoff-v1.zip SHA256   # Windows
 ```
 
